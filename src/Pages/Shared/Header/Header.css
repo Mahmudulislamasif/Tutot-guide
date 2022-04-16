@@ -1,0 +1,17 @@
+.bg-color
+{
+    background-color: beige;
+    padding: 20px;
+}
+
+.link-class
+{
+    text-decoration: none;
+    color: black;
+}
+.link-class:hover
+{
+    color: white;
+    background-color: #ff0080;
+    padding: 5px;
+}
