@@ -9,18 +9,27 @@ import Login from './Pages/Login/Login';
 import Footer from './Pages/Shared/Footer/Footer';
 import SignUp from './Pages/SignUp/SignUp';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import CheckOut from './Pages/Home/CheckOut/CheckOut';
+import RequireAuth from './Pages/RequireAuth/RequireAuth';
+import { createContext, useState } from 'react';
+import Service from './Pages/Home/Service/Service';
+export const ServiceContext=createContext()
 function App() {
+  const [services,setServices]=useState([])
   return (
-    <div>
+    <div className='App'>
       <Header></Header>
+      <ServiceContext.Provider value={[services,setServices]}>
       <Routes>
         <Route path='/' element={<Home></Home>}></Route>
         <Route path='/home' element={<Home></Home>}></Route>
         <Route path='/about' element={<About></About>}></Route>
         <Route path='/blogs' element={<Blogs></Blogs>}></Route>
+        <Route path='/service/:newId' element={<CheckOut></CheckOut>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/signup' element={<SignUp></SignUp>}></Route>
       </Routes>
+      </ServiceContext.Provider>
       <Footer></Footer>
     </div>
   );

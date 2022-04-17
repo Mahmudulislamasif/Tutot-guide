@@ -1,24 +1,31 @@
 [
     {
         "id":1,
+        "name":"Home Tutor",
+        "price":5000,
+        "description":"Specielist in Science subjects like, Math, Physics and Chemistry",
+        "image":"./ServiceImage/Home_Tutor.jpg"
+    },
+    {
+        "id":2,
+        "name":"Batch Tutor",
+        "price":5000,
+        "description":"Batch students are thaught",
+        "image":"./ServiceImage/Batch-Tutor.jpg"
+    },
+    {
+        "id":3,
         "name":"Online Tutor",
-        "price":3000,
+        "price":1000,
         "description":"Lorem",
         "image":"./ServiceImage/online-tutor.jpg"
     },
     {
-        "id":2,
-        "name":"Coding",
-        "price":5000,
+        "id":3,
+        "name":"Online Tutor",
+        "price":3000,
         "description":"Lorem",
         "image":"./ServiceImage/coding.jpg"
-    },
-    {
-        "id":3,
-        "name":"Home Tutor",
-        "price":6000,
-        "description":"Lorem",
-        "image":"./ServiceImage/Home-Tutor.jpg"
     }
 
 ]
