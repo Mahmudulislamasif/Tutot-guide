@@ -1,13 +1,13 @@
 
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import './Service.css'
 const Service = (props) => {
-    const {name,image,description,price,id}=props.service;
+    const {name,image,description,price}=props.service;
     const navigate=useNavigate()
-    const showCheckOut=()=>
+    const showDetails=()=>
     {
-      navigate('/service/'+id)
+      navigate('/checkout')
     }
     return (
         <div className='col-md-4'>
@@ -16,7 +16,7 @@ const Service = (props) => {
               <h5>{name}</h5>
               <p className='description-class'>{description}</p>
               <p className='description-class'>{price}</p>
-              <button onClick={showCheckOut}>Checkout</button>
+              <Link to='/checkout'>CheckOut</Link>
             </div>
         </div>
     );

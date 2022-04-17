@@ -1,11 +1,10 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import { useParams } from 'react-router-dom';
 
 const CheckOut = () => {
-    const params=useParams()
     return (
         <div>
-            <h1>Thanks For Your Choice</h1>
+          <h1>Hello</h1>
         </div>
     );
 };

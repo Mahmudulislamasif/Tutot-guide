@@ -23,7 +23,7 @@
     border: none;
     border-radius: 5px;
 }
-.login-form button
+.login-form .btn-class
 {
     width: 100%;
     background-color: #ff0080;

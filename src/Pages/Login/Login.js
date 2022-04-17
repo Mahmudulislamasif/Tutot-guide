@@ -1,12 +1,19 @@
 import React, { useEffect, useState } from 'react';
-import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
-import { Link, useNavigate } from 'react-router-dom';
+import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import './Login.css'
+import { Button } from 'bootstrap';
 const Login = () => {
     const [email,setEmail]=useState('')
     const [password,setPassword]=useState('');
+
     const navigate=useNavigate()
+    const location = useLocation();
+    let from = location.state?.from?.pathname || "/";
+
     let errorElement;
     const [
       signInWithEmailAndPassword,
@@ -14,13 +21,13 @@ const Login = () => {
       loading,
       error,
     ] = useSignInWithEmailAndPassword(auth);
+    const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(auth);
     if(error)
     {
       errorElement=<p className='text-danger'>{error?.message}</p>
     }
-    if(user)
-    {
-     navigate('/home')
+    if (user) {
+      navigate(from, { replace: true });
     }
     const handleEmail=(event)=>
     {
@@ -35,6 +42,16 @@ const Login = () => {
       event.preventDefault();
       signInWithEmailAndPassword(email, password)
     }
+    
+    const resetPassword = async () => {
+      if (email) {
+          await sendPasswordResetEmail(email);
+          toast('Sent email');
+      }
+      else{
+          toast('please enter your email address');
+      }
+  }
     return (
         <div className='login-form'>
         <h1>Login</h1>
@@ -42,9 +59,13 @@ const Login = () => {
             <input onBlur={handleEmail}  type="email" name="email" placeholder='email'/>
             <input onBlur={handlePassword}  type="password" name="password" placeholder="password"/>
             {errorElement}
-            <p>New to here? <Link to='/signUp'>signUp</Link></p>
-            <button>Login</button>
+           
+            <button className='btn-class'>Login</button>
+            
         </form>
+            <p>New to here? <Link to='/signUp'>signUp</Link></p>
+            <p>Forget Password? <button onClick={resetPassword}>Reset Password</button></p>
+            <ToastContainer />
         </div>
     );
 };
