@@ -5,15 +5,26 @@ import auth from '../../firebase.init';
 import './Login.css'
 const Login = () => {
     const [email,setEmail]=useState('')
-    const [password,setPassword]=useState('')
+    const [password,setPassword]=useState('');
+    const navigate=useNavigate()
     let errorElement;
-    const navigate=useNavigate('')
-  
-    const [signInWithEmailAndPassword,user,loading,error,] = useSignInWithEmailAndPassword(auth);
-    
-    const handleEmail =(event)=>
+    const [
+      signInWithEmailAndPassword,
+      user,
+      loading,
+      error,
+    ] = useSignInWithEmailAndPassword(auth);
+    if(error)
     {
-        setEmail(event.target.value)
+      errorElement=<p className='text-danger'>{error?.message}</p>
+    }
+    if(user)
+    {
+     navigate('/home')
+    }
+    const handleEmail=(event)=>
+    {
+      setEmail(event.target.value)
     }
     const handlePassword=(event)=>
     {
@@ -21,20 +32,16 @@ const Login = () => {
     }
     const handleLogIn=(event)=>
     {
-        event.preventDefault();
-        signInWithEmailAndPassword(email,password)
+      event.preventDefault();
+      signInWithEmailAndPassword(email, password)
     }
     return (
         <div className='login-form'>
         <h1>Login</h1>
         <form onSubmit={handleLogIn}>
-            <input onBlur={handleEmail} type="email" name='email' placeholder='email'/>
-            <div>
-              <input onBlur={handlePassword} type="password" name="password" placeholder="password"/>
-            </div>
-            {
-              error&& <p className='text-danger'>{error?.message}</p>
-            } 
+            <input onBlur={handleEmail}  type="email" name="email" placeholder='email'/>
+            <input onBlur={handlePassword}  type="password" name="password" placeholder="password"/>
+            {errorElement}
             <p>New to here? <Link to='/signUp'>signUp</Link></p>
             <button>Login</button>
         </form>

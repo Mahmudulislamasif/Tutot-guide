@@ -8,7 +8,7 @@ import Blogs from './Pages/Blogs/Blogs';
 import Login from './Pages/Login/Login';
 import Footer from './Pages/Shared/Footer/Footer';
 import SignUp from './Pages/SignUp/SignUp';
-
+import 'bootstrap/dist/css/bootstrap.min.css';
 function App() {
   return (
     <div>

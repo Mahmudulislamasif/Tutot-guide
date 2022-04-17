@@ -35,9 +35,9 @@ const SignUp = () => {
         <div className='login-form'>
         <h1>SignUp</h1>
         <form onSubmit={signUpNewUser}>
-            <input onBlur={handleEmail} type="email" name='email' placeholder='email'/>
-            <input onBlur={handlePassword}  type="password" name="password" placeholder="password"/>
-            <input onBlur={handleConfirmPassword} type="password" name="password" placeholder="Confirm Password"/>
+            <input onBlur={handleEmail}  type="email" name='email' placeholder='email'/>
+            <input onBlur={handlePassword}   type="password" name="password" placeholder="password"/>
+            <input onBlur={handleConfirmPassword}  type="password" name="password" placeholder="Confirm Password"/>
             {
                 errorMatch? <p className='text-danger'>{errorMatch}</p>:
                 <p className='text-danger'>{error?.message}</p>
