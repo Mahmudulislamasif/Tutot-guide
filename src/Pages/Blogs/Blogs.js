@@ -11,8 +11,9 @@ const Blogs = () => {
                </div>
               </div>
               <div className='col-md-6'>
-                 <div>
-                   <h5>What is the differences between authorization and authentication?</h5>
+                 <div className='blogs-class shadow-lg mt-3'>
+                   <h5> Why are you using firebase? What other options do you have to implement authentication?</h5>
+                   <p>There are many data storage platforms are used to stored user data firebase is one of them. I mainly used firebase for it's security. Also, There are many advantages firebase have. Some advantages are: fast web hosting, Multi-Platfoorm Authentication, Unlimited Google Analytics for mobile apps etc. Other Options for authentication are MongoDB,AUth0,Amazon Cognito,Okta, Passport, JSON web token etc. </p>
                  </div>
               </div>
            </div>
