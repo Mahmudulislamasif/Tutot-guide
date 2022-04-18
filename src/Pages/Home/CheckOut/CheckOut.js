@@ -1,7 +1,9 @@
 import React from 'react';
 import { Button, Modal } from 'react-bootstrap';
+
 import './CheckOut.css'
 const CheckOut = () => {
+   
     return (
       <div className='modal-class'>
       <Modal.Dialog>
@@ -14,6 +16,7 @@ const CheckOut = () => {
         <Button variant="primary">Save changes</Button>
       </Modal.Footer>
     </Modal.Dialog>
+      
       </div>
     );
 };
