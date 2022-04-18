@@ -35,16 +35,21 @@ const SignUp = () => {
         <div className='login-form'>
         <h1>SignUp</h1>
         <form onSubmit={signUpNewUser}>
-            <input onBlur={handleEmail}  type="email" name='email' placeholder='email'/>
-            <input onBlur={handlePassword}   type="password" name="password" placeholder="password"/>
-            <input onBlur={handleConfirmPassword}  type="password" name="password" placeholder="Confirm Password"/>
+            <input onBlur={handleEmail}  type="email" name='email' placeholder='email' reqiured/>
+            <input onBlur={handlePassword}   type="password" name="password" placeholder="password" required/>
+            <input onBlur={handleConfirmPassword}  type="password" name="password" placeholder="Confirm Password" required/>
             {
                 errorMatch? <p className='text-danger'>{errorMatch}</p>:
                 <p className='text-danger'>{error?.message}</p>
             }
             <p>New to here? <Link to='/login'>Login</Link></p>
-            <button>SignUp</button>
-            <button>Login with Google</button>
+            <button className='btn-class'>SignUp</button>
+            <div className='d-flex justify-content-center'>
+                <p>--------------------------</p>
+                <p className='ms-2 me-2'>Or</p>
+                <p>-----------------------------</p>
+            </div>
+            <button className='btn-class'>SignUp with Google</button>
         </form>
         </div>
     );

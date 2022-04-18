@@ -6,6 +6,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import './Login.css'
 import { Button } from 'bootstrap';
+import SocialLogin from '../SocialLogin/SocialLogin';
 const Login = () => {
     const [email,setEmail]=useState('')
     const [password,setPassword]=useState('');
@@ -54,14 +55,15 @@ const Login = () => {
         <div className='login-form'>
         <h1>Login</h1>
         <form onSubmit={handleLogIn}>
-            <input onBlur={handleEmail}  type="email" name="email" placeholder='email'/>
-            <input onBlur={handlePassword}  type="password" name="password" placeholder="password"/>
+            <input onBlur={handleEmail}  type="email" name="email" placeholder='email' required/>
+            <input onBlur={handlePassword}  type="password" name="password" placeholder="password" required/>
             {errorElement}
             <button className='btn-class'>Login</button>
         </form>
             <p>New to here? <Link to='/signUp'>signUp</Link></p>
-            <p>Forget Password? <button onClick={resetPassword}>Reset Password</button></p>
+            <p>Forget Password? <button className='check-button' onClick={resetPassword}>Reset Password</button></p>
             <ToastContainer />
+            <SocialLogin></SocialLogin>
         </div>
     );
 };
