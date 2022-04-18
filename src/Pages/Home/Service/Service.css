@@ -1,8 +1,14 @@
-
+.details-class
+{
+    background-color: bisque;
+    padding: 10px;
+}
 .description-class
 {
     text-align: left;
+    text-align: justify;
 }
+
 .check-button
 {
     background-color: orange;

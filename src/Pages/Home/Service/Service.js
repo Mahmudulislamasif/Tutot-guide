@@ -10,9 +10,12 @@ const Service = (props) => {
             <div className='shadow-lg p-3'>
               <img className='w-75' src={image} alt=''/>
               <h5>{name}</h5>
+              <div className='details-class'>
               <p className='description-class'>{description}</p>
-              <p className='description-class'>{price}</p>
+              <h6 className='mb-2'>Price:{price}tk</h6>
               <button className='check-button'><Link className='link-class-check'  to='/checkout'>CheckOut</Link></button>
+              </div>
+
             </div>
         </div>
     );
