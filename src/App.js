@@ -10,6 +10,7 @@ import SignUp from './Pages/SignUp/SignUp';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import CheckOut from './Pages/Home/CheckOut/CheckOut';
 import RequireAuth from './Pages/RequireAuth/RequireAuth';
+import NotFound from './Pages/NotFound/NotFound';
 
 function App() {
   return (
@@ -28,7 +29,9 @@ function App() {
         </RequireAuth>
         }>
         </Route>
+        <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>
+     
       <Footer></Footer>
     </div>
   );

@@ -1,0 +1,12 @@
+.notFound 
+{
+    background-color: beige;
+    padding: 220px;
+    margin-top: 20px;
+}
+@media only screen and (max-width:576px) {
+    .notFound
+    {
+       padding: 10px;
+    }
+}
