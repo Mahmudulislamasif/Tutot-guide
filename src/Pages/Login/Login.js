@@ -8,6 +8,7 @@ import './Login.css'
 import { Button } from 'bootstrap';
 import SocialLogin from '../SocialLogin/SocialLogin';
 const Login = () => {
+    // Collect User Info from firebase hook
     const [email,setEmail]=useState('')
     const [password,setPassword]=useState('');
     const navigate=useNavigate()

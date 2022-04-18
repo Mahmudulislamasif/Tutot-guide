@@ -3,11 +3,13 @@ import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { Link } from 'react-router-dom';
 import auth from '../../firebase.init'
 const SignUp = () => {
+      // Collect User Info from firebase hook
     const [email,setEmail]=useState('')
     const [password,setPassword]=useState('')
     const [confirmPassword,setConfirmPassword]=useState('')
     const [errorMatch,setErrorMatch]=useState('')
     const [createUserWithEmailAndPassword,user,loading,error,] = useCreateUserWithEmailAndPassword(auth,{sendEmailVerification:true});
+    // Take Input From User
     const handleEmail =(event)=>
     {
         setEmail(event.target.value)
