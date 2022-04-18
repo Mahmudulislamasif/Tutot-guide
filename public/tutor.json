@@ -2,29 +2,29 @@
     {
         "id":1,
         "name":"Home Tutor",
-        "price":5000,
-        "description":"Specielist in Science subjects like, Math, Physics and Chemistry",
+        "price":"Price:5000",
+        "description":"Specielist in Science subjects Such as Math, Physics and Chemistry And teach as a home tutor",
         "image":"./ServiceImage/Home_Tutor.jpg"
     },
     {
         "id":2,
         "name":"Batch Tutor",
-        "price":5000,
-        "description":"Batch students are thaught",
+        "price":"Price:1000",
+        "description":"Able to teach batch students and also have 2 year experience.",
         "image":"./ServiceImage/Batch-Tutor.jpg"
     },
     {
         "id":3,
         "name":"Online Tutor",
-        "price":1000,
-        "description":"Lorem",
+        "price":"Price:3000",
+        "description":"Class are conducted though Zoom app",
         "image":"./ServiceImage/online-tutor.jpg"
     },
     {
         "id":4,
-        "name":"Online Tutor",
-        "price":3000,
-        "description":"Lorem",
+        "name":"Coding",
+        "price":"Price 4000",
+        "description":"Able to teach Defferent types of coding languge such as, c,c++,Html,Css,javaAcript",
         "image":"./ServiceImage/coding.jpg"
     }
 

@@ -1,10 +1,20 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto&display=swap');
- body
-{
-    font-family: 'Poppins', sans-serif;
-}
+
 .description-class
 {
     text-align: left;
-    
+}
+.check-button
+{
+    background-color: orange;
+    border: none;
+    border-radius: 5px;
+}
+.link-class-check
+{
+    text-decoration: none;
+    color: black;
+}
+.link-class-check:hover
+{
+    color:black
 }

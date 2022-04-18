@@ -9,11 +9,9 @@ import { Button } from 'bootstrap';
 const Login = () => {
     const [email,setEmail]=useState('')
     const [password,setPassword]=useState('');
-
     const navigate=useNavigate()
     const location = useLocation();
     let from = location.state?.from?.pathname || "/";
-
     let errorElement;
     const [
       signInWithEmailAndPassword,
@@ -46,10 +44,10 @@ const Login = () => {
     const resetPassword = async () => {
       if (email) {
           await sendPasswordResetEmail(email);
-          toast('Sent email');
+          toast('Sent email to Your Email');
       }
       else{
-          toast('please enter your email address');
+          toast('Please Enter Your Email');
       }
   }
     return (
@@ -59,9 +57,7 @@ const Login = () => {
             <input onBlur={handleEmail}  type="email" name="email" placeholder='email'/>
             <input onBlur={handlePassword}  type="password" name="password" placeholder="password"/>
             {errorElement}
-           
             <button className='btn-class'>Login</button>
-            
         </form>
             <p>New to here? <Link to='/signUp'>signUp</Link></p>
             <p>Forget Password? <button onClick={resetPassword}>Reset Password</button></p>
