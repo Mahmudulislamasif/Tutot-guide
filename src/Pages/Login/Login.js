@@ -43,7 +43,7 @@ const Login = () => {
       signInWithEmailAndPassword(email, password)
     }
     
-    const resetPassword = async () => {
+    const resetPassword = async (email) => {
       if (email) {
           await sendPasswordResetEmail(email);
           toast('Sent email to Your Email');
@@ -62,7 +62,7 @@ const Login = () => {
             <button className='btn-class'>Login</button>
         </form>
             <p>New to here? <Link to='/signUp'>signUp</Link></p>
-            <p>Forget Password? <button className='check-button' onClick={resetPassword}>Reset Password</button></p>
+            <p>Forget Password? <button className='check-button' onClick={()=>resetPassword(email)}>Reset Password</button></p>
             <ToastContainer />
             <SocialLogin></SocialLogin>
         </div>

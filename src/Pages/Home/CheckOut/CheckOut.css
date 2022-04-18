@@ -1,0 +1,10 @@
+.modal-class
+{
+    background-color: black;
+    padding: 220px;
+}
+@media only screen and (max-width:576px) {
+    .modal-class{
+       padding: 20px;
+    }
+}
