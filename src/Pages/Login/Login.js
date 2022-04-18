@@ -61,7 +61,7 @@ const Login = () => {
             {errorElement}
             <button className='btn-class'>Login</button>
         </form>
-            <p>New to here? <Link to='/signUp'>signUp</Link></p>
+            <p>New to here? <Link className='auth-design' to='/signUp'>Register</Link></p>
             <p>Forget Password? <button className='check-button' onClick={()=>resetPassword(email)}>Reset Password</button></p>
             <ToastContainer />
             <SocialLogin></SocialLogin>

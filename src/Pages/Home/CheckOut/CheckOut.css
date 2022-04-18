@@ -1,6 +1,6 @@
 .modal-class
 {
-    background-color: black;
+    background-color: bisque;
     padding: 220px;
 }
 @media only screen and (max-width:576px) {

@@ -34,6 +34,15 @@
     font-size: 20px;
     margin-bottom: 10px;
 }
+.auth-design
+{
+    text-decoration: none;
+    color: #ff0080;
+}
+.auth-design:hover
+{
+    color: #ff0080;
+}
 @media only screen and (max-width:576px) {
     .login-form{
         width: 80%;

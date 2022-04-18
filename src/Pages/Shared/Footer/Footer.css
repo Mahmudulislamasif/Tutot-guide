@@ -1,8 +1,10 @@
 
-footer 
+ footer 
 {
   background-color: black;
   margin-top: 20px;
+  min-height: 15vh;
+  
 }
 footer p{
     padding: 30px;
@@ -10,4 +12,4 @@ footer p{
 footer small
 {
     color: white;
-}
+} 

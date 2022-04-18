@@ -6,7 +6,7 @@ const CheckOut = () => {
       <div className='modal-class'>
       <Modal.Dialog>
       <Modal.Header closeButton>
-        <Modal.Title>Thanks For Your Choice Plan</Modal.Title>
+        <Modal.Title>Thanks For Your Choice</Modal.Title>
       </Modal.Header>
     
       <Modal.Footer>

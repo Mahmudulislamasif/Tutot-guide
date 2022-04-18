@@ -41,7 +41,7 @@ const SignUp = () => {
     }
     return (
         <div className='login-form'>
-        <h1>SignUp</h1>
+        <h1>Register</h1>
         <form onSubmit={signUpNewUser}>
             <input onBlur={handleEmail}  type="email" name='email' placeholder='email' reqiured/>
             <input onBlur={handlePassword}   type="password" name="password" placeholder="password" required/>
@@ -50,8 +50,8 @@ const SignUp = () => {
                 errorMatch? <p className='text-danger'>{errorMatch}</p>:
                 <p className='text-danger'>{error?.message}</p>
             }
-            <p>New to here? <Link to='/login'>Login</Link></p>
-            <button className='btn-class'>SignUp</button>
+            <p>Already have an account? <Link className='auth-design' to='/login'>Login</Link></p>
+            <button className='btn-class'>Register</button>
         </form>
            <SocialLogin></SocialLogin>
         </div>

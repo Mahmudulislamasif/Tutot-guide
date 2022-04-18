@@ -2,7 +2,7 @@
 import { useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import { useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
- 
+import './SocielLogin.css'
  const SocialLogin = () => {
     const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
     const navigate=useNavigate()
@@ -19,11 +19,11 @@ import auth from '../../firebase.init';
             }
      return (
          <div>
-              <div className='d-flex justify-content-center'>
-                <p>--------------------------</p>
-                <p className='ms-2 me-2'>Or</p>
-                <p>-----------------------------</p>
-            </div>
+              <div className='horizontal-line'>
+                <div className='left-line'/>
+                    <p>Or</p>
+                <div className='right-line'/>
+              </div>
             {errorElement}
             <button className='btn-class' onClick={()=>signInWithGoogle()}>SignIn with Google</button>
          </div>
