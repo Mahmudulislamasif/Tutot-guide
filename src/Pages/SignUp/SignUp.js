@@ -1,13 +1,15 @@
 import React,{ useState }  from 'react';
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
-import { Link } from 'react-router-dom';
+import { Link, Navigate, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init'
+import SocialLogin from '../SocialLogin/SocialLogin';
 const SignUp = () => {
       // Collect User Info from firebase hook
     const [email,setEmail]=useState('')
     const [password,setPassword]=useState('')
     const [confirmPassword,setConfirmPassword]=useState('')
     const [errorMatch,setErrorMatch]=useState('')
+    const navigate=useNavigate()
     const [createUserWithEmailAndPassword,user,loading,error,] = useCreateUserWithEmailAndPassword(auth,{sendEmailVerification:true});
     // Take Input From User
     const handleEmail =(event)=>
@@ -21,6 +23,10 @@ const SignUp = () => {
     const handleConfirmPassword=(event)=>
     {
        setConfirmPassword(event.target.value)
+    }
+    if(user)
+    {
+        navigate('/home')
     }
     const signUpNewUser =(event)=>
     {
@@ -46,13 +52,8 @@ const SignUp = () => {
             }
             <p>New to here? <Link to='/login'>Login</Link></p>
             <button className='btn-class'>SignUp</button>
-            <div className='d-flex justify-content-center'>
-                <p>--------------------------</p>
-                <p className='ms-2 me-2'>Or</p>
-                <p>-----------------------------</p>
-            </div>
-            <button className='btn-class'>SignUp with Google</button>
         </form>
+           <SocialLogin></SocialLogin>
         </div>
     );
 };
