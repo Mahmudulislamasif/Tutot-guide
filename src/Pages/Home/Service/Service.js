@@ -4,8 +4,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import './Service.css'
 const Service = (props) => {
     const {name,image,description,price}=props.service;
-
-   
+    
     return (
         <div className='col-md-4'>
             <div className='shadow-lg p-3'>

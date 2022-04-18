@@ -1,0 +1,15 @@
+.about-desc
+{
+    background-color: orange;
+}
+.about-desc h5{
+    text-align: justify;
+    padding: 50px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+@media only screen and (max-width:576px) {
+    .about-desc h5{
+        text-align: justify;
+        padding: 20px;
+    }
+}
