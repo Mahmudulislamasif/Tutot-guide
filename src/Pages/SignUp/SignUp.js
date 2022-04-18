@@ -27,6 +27,7 @@ const SignUp = () => {
     if(user)
     {
         navigate('/home')
+
     }
     const signUpNewUser =(event)=>
     {
@@ -43,7 +44,7 @@ const SignUp = () => {
         <div className='login-form'>
         <h1>Register</h1>
         <form onSubmit={signUpNewUser}>
-            <input onBlur={handleEmail}  type="email" name='email' placeholder='email' reqiured/>
+            <input onBlur={handleEmail}  type="email" name="email" placeholder="email" reqiured/>
             <input onBlur={handlePassword}   type="password" name="password" placeholder="password" required/>
             <input onBlur={handleConfirmPassword}  type="password" name="password" placeholder="Confirm Password" required/>
             {

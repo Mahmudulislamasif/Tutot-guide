@@ -1,12 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto&display=swap');
- body
-{
-    font-family: 'Poppins', sans-serif;
-}
+
 .blogs-class
 {
-    background-color: black;
-    color: white;
+    background-color: rgb(250, 245, 239);
+    color: black;
     text-align: justify;
     padding: 20px;
 }
